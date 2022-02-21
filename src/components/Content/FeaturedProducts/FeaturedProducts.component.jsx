@@ -5,11 +5,12 @@ import Loading from '../Loading';
 import { FeatureProductsDiv } from './FeaturedProducts.styles';
 
 const FeatureProducts = () => {
-  const { data: products } = useFetch('./featured-products.json', 'results');
+  const { data: products, loading: isLoading } = useFetch(
+    './featured-products.json',
+    'results'
+  );
 
-  console.log('products', products);
-
-  if (!products) {
+  if (isLoading) {
     return <Loading />;
   }
 

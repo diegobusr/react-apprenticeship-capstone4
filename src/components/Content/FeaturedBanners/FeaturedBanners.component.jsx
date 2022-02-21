@@ -1,6 +1,6 @@
 import React from 'react';
 import { SwiperSlide } from 'swiper/react';
-import { useFeaturedBanners } from '../../../utils/hooks/useFeaturedBanners';
+import useFetch from '../../../utils/hooks/useFetch';
 import Banner from './Banner';
 import Loading from '../Loading';
 import SwiperCore, { EffectCoverflow, Pagination } from 'swiper';
@@ -11,13 +11,14 @@ import { SliderDiv, SwiperDiv } from './FeaturedBanners.styles';
 SwiperCore.use([EffectCoverflow, Pagination]);
 
 const FeaturedBanners = () => {
-  const { data, isLoading } = useFeaturedBanners();
+  const { data: featuredBanners, loading: isLoading } = useFetch(
+    './featured-banners.json',
+    'results'
+  );
 
   if (isLoading) {
     return <Loading />;
   }
-
-  const featuredBanners = data.results;
 
   return (
     <SliderDiv>

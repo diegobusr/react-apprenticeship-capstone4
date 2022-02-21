@@ -8,8 +8,8 @@ export const ProductView = styled.div`
   background-color: #ffffff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  min-width: 300px;
-  min-height: 530px;
+  min-width: 100px;
+  min-height: 100px;
   margin: 10px;
   flex-direction: column;
   padding: 5px 10px 5px 10px;
@@ -20,13 +20,15 @@ export const ProductView = styled.div`
 `;
 
 export const ProductImg = styled.img`
+  min-height: 100px;
+  min-width: 100px;
   height: 350px;
   width: 100%;
   border-radius: 5px 5px 0 0;
   object-fit: cover;
 `;
-export const ProductName = styled.h2`
-  color: black;
+export const ProductName = styled.span`
+  color: #0945be;
   min-height: 30px;
   font-size: 0.9em;
 `;
@@ -36,9 +38,9 @@ export const ProductCategory = styled.span`
   font-size: 0.8em;
   color: #757575;
 `;
-export const ProductPrice = styled.h1`
-  text-align: end;
+export const ProductPrice = styled.span`
   color: black;
+  font-weight: bold;
   min-height: 30px;
   font-size: 1.3em;
 `;

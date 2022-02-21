@@ -1,17 +1,22 @@
-/* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
 
-export default function useFetch(url, type) {
+export default function useFetch(url) {
   const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
-      const result = await fetch(url);
-      const resultJson = await result.json();
-      console.log('resultJson', resultJson);
-      setData(resultJson[`${type}`]);
+      try {
+        setLoading(true);
+        const result = await fetch(url);
+        const resultJson = await result.json();
+        setData(resultJson.results);
+        setLoading(false);
+      } catch (error) {
+        setError(error);
+      }
     })();
   }, [url]);
-
-  return { data };
+  return { data, error, loading };
 }

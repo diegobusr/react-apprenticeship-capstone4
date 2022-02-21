@@ -8,10 +8,9 @@ import {
 } from './Product.styles';
 
 const Product = ({ product }) => {
-  console.log('product', product);
   return (
     <ProductView>
-      <ProductImg src={product.data.mainimage.url} alt="thumbnail"></ProductImg>
+      <ProductImg src={product.data.mainimage.url} alt="product"></ProductImg>
       <ProductName> {product.data.name} </ProductName>
       <ProductCategory>
         <strong>Category: </strong> {product.data.category.slug}

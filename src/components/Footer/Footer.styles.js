@@ -9,7 +9,7 @@ export const FooterDiv = styled.div`
   flex-wrap: wrap;
   background-color: #0945be;
   padding: 0;
-  margin: 0;
+  margin-top: 30px;
   box-sizing: border-box;
 `;
 

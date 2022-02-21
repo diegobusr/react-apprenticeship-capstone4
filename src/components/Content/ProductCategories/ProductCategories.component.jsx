@@ -8,8 +8,11 @@ import 'swiper/swiper.min.css';
 import { ProductCategoriesDiv, SwiperDiv } from './ProductCategories.styles';
 
 const ProductCategories = () => {
-  const { data: categories } = useFetch('./product-categories.json', 'results');
-  if (!categories) {
+  const { data: categories, loading: isLoading } = useFetch(
+    './product-categories.json',
+    'results'
+  );
+  if (isLoading) {
     return <Loading />;
   }
 
@@ -19,8 +22,8 @@ const ProductCategories = () => {
         spaceBetween={0}
         slidesPerView={4}
         centeredSlidesBounds={true}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => {}}
+        onSwiper={() => {}}
       >
         {categories.map((category) => {
           return (

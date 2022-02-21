@@ -1,12 +1,12 @@
 import React from 'react';
-import { CardView } from './Category.styles';
+import { CategoryView, CategoryImg, CategoryName } from './Category.styles';
 
 const Category = ({ category }) => {
   return (
-    <CardView>
-      <img src={category.data.main_image.url} alt="thumbnail"></img>
-      <h2> {category.data.name} </h2>
-    </CardView>
+    <CategoryView>
+      <CategoryImg src={category.data.main_image.url} alt="thumbnail" />
+      <CategoryName> {category.data.name} </CategoryName>
+    </CategoryView>
   );
 };
 

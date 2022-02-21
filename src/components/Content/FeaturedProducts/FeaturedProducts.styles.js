@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 export const FeatureProductsDiv = styled.div`
-  display: flex;
+  display: grid;
   width: 100%;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-evenly;
   align-items: center;
 `;
