@@ -16,13 +16,6 @@ export const BannerView = styled.div`
 export const BannerTextDiv = styled.div`
   max-height: 370px;
   border-radius: 5px 5px 0 0;
-
-  h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
 `;
 
 export const BannerImg = styled.img`
@@ -31,7 +24,12 @@ export const BannerImg = styled.img`
   object-fit: cover;
 `;
 
-export const BannerText = styled.h1`
+export const BannerText = styled.span`
+  position: absolute;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
   text-align: center;
