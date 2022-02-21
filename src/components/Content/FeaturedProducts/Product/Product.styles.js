@@ -30,12 +30,12 @@ export const ProductImg = styled.img`
 export const ProductName = styled.span`
   color: #0945be;
   min-height: 30px;
-  font-size: 0.9em;
+  font-size: 0.8em;
 `;
 export const ProductCategory = styled.span`
   max-width: 90%;
   margin-bottom: 10px;
-  font-size: 0.8em;
+  font-size: 0.7em;
   color: #757575;
 `;
 export const ProductPrice = styled.span`

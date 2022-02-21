@@ -3,10 +3,8 @@ import styled from 'styled-components';
 export const CategoryView = styled.div`
   display: flex;
   flex-wrap: wrap;
-  text-decoration: none;
   color: black;
   background-color: #ffffff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   max-width: 86%;
   min-height: 190px;
@@ -18,7 +16,7 @@ export const CategoryView = styled.div`
 export const CategoryImg = styled.img`
   height: 145px;
   width: 100%;
-  border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 5px 5px;
   object-fit: cover;
 `;
 

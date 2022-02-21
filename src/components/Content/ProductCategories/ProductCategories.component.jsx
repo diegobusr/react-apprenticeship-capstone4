@@ -20,7 +20,7 @@ const ProductCategories = () => {
     <ProductCategoriesDiv>
       <SwiperDiv
         spaceBetween={0}
-        slidesPerView={4}
+        slidesPerView={3}
         centeredSlidesBounds={true}
         onSlideChange={() => {}}
         onSwiper={() => {}}
