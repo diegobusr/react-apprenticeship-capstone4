@@ -7,7 +7,7 @@ export const BannerView = styled.div`
   background-color: #ffffff;
   border-radius: 5px;
   max-width: 100%;
-  min-height: 400px;
+  min-height: 250px;
   margin: 15px;
   flex-direction: column;
   padding: 5px 10px 5px 10px;
@@ -19,7 +19,7 @@ export const BannerTextDiv = styled.div`
 `;
 
 export const BannerImg = styled.img`
-  max-height: 370px;
+  max-height: 210px;
   border-radius: 5px 5px 0 0;
   object-fit: cover;
 `;
